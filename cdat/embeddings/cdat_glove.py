@@ -10,14 +10,12 @@ from nltk.corpus import wordnet
 class Model:
     """Create model to compute CDAT using GloVe"""
 
-    def __init__(self, model_path="../glove.840B.300d.txt", dictionary="../words_glove.txt", pattern="^[a-z][a-z-]*[a-z]$"):
+    def __init__(self, model_path="glove/glove.840B.300d.txt", pattern="^[a-z][a-z-]*[a-z]$"):
         """Load GloVe model - Load all words matching pattern directly from GloVe file
         
         Args:
             model_path (str): Path to GloVe model file (.txt). 
-                            Default: '../glove.840B.300d.txt'
-            dictionary (str): Path to dictionary file (not used, kept for compatibility).
-                              Default: '../words_glove.txt'
+                            Default: 'glove/glove.840B.300d.txt'
             pattern (str): Regex pattern to match valid words.
                          Default: '^[a-z][a-z-]*[a-z]$' (lowercase words with optional hyphens)
         """

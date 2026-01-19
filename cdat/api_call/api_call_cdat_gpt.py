@@ -11,10 +11,15 @@ import logging
 import warnings
 warnings.filterwarnings('ignore')
 
-# Fixed cues
-with open('../cdat_cues_filtered550.txt', 'r') as f:
-    cues = f.read().splitlines() 
+from pathlib import Path
+# Define the repo root once
+REPO_ROOT = Path.cwd().parents[1] # the notebook launched from repo root
+cue_file = REPO_ROOT/'cdat'/'data'/'cdat_cues_filtered550.txt'
 
+# Fixed cues
+with open(cue_file, 'r') as f:
+    cues = f.read().splitlines()  
+    
 # key
 client = OpenAI(
     api_key = "" # Add your key here
