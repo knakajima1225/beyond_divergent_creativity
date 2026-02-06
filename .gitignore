@@ -20,6 +20,6 @@ __pycache__/
 # ======================
 data/
 model/
-dat/
 cdat/figures/
+dat/figures/
 
