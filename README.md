@@ -1,4 +1,8 @@
-### External resources
+This repository contains the code and data for the paper ["Beyond Divergent Creativity: A Human-Based Evaluation of Creativity in Large Language Models"](https://arxiv.org/abs/2601.20546).
+
+## Requirements
+
+The requirements for running the code in this repository are listed in the `requirements.txt` file.
 
 This project requires pretrained embeddings:
 
