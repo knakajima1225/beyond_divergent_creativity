@@ -16,8 +16,8 @@ parser = argparse.ArgumentParser(description='Generate random baseline results f
 parser.add_argument('cue_file', type=str, help='Path to the cue file (one cue per line)')
 args = parser.parse_args()
 
-# Be sure to set random seed for reproducibility
-# NOTE: the original code was run without a seed. The dataset is available in the repository. 
+# NOTE: Be sure to set random seed for reproducibility
+# the original code was run without a seed. The dataset is available in the repository. 
 #random.seed(42)
 
 # Download WordNet if not already installed

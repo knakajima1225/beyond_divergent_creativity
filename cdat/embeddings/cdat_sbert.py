@@ -68,6 +68,7 @@ class Model:
                 uniques.append(valid)
 
         num_unique = len(uniques)
+        
         if num_unique < minimum:
             return ((None, None), num_unique)
         else:

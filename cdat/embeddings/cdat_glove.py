@@ -10,12 +10,11 @@ from nltk.corpus import wordnet
 class Model:
     """Create model to compute CDAT using GloVe"""
 
-    def __init__(self, model_path="glove/glove.840B.300d.txt", pattern="^[a-z][a-z-]*[a-z]$"):
+    def __init__(self, model_path, pattern="^[a-z][a-z-]*[a-z]$"):
         """Load GloVe model - Load all words matching pattern directly from GloVe file
         
         Args:
             model_path (str): Path to GloVe model file (.txt). 
-                            Default: 'glove/glove.840B.300d.txt'
             pattern (str): Regex pattern to match valid words.
                          Default: '^[a-z][a-z-]*[a-z]$' (lowercase words with optional hyphens)
         """
@@ -64,7 +63,7 @@ class Model:
                 # Check if word is a noun using POS tagging
                 word_tagged = nltk.pos_tag([cand])[0][1]
                 
-                # For multiple possible tags, better to use WordNet
+                # Added - For multiple possible tags, better to use WordNet
                 possible_pos = set()
                 for synset in wordnet.synsets(cand):
                     possible_pos.add(synset.pos())
